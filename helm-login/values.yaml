@@ -200,11 +200,11 @@ operator:
   valuesFromSecret: ""
 
 image:
-  registry: "mirror.gcr.io"
-  repository: "aquasec/trivy-operator"
+  registry: "docker.io"
+  repository: "afdesk/trivy-operator-dev"
   # -- tag is an override of the image tag, which is by default set by the
   # appVersion field in Chart.yaml.
-  tag: ""
+  tag: "login"
   # -- pullPolicy set the operator pullPolicy
   pullPolicy: IfNotPresent
   # -- pullSecrets set the operator pullSecrets
@@ -555,8 +555,8 @@ trivy:
   dbRepositoryPassword: ~
 
   # -- javaDbRegistry is the registry for the Java vulnerability database.
-  javaDbRegistry: "mirror.gcr.io"
-  javaDbRepository: "aquasec/trivy-java-db"
+  javaDbRegistry: "docker.io"
+  javaDbRepository: "afdesk/private"
 
   # -- The Flag to enable insecure connection for downloading trivy-db via proxy (air-gaped env)
   #
