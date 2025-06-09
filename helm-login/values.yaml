@@ -502,7 +502,7 @@ trivy:
       # ephemeralStorage: "2Gi"
     limits:
       cpu: 500m
-      memory: 500M
+      memory: 1Gi
       # ephemeralStorage: "2Gi"
 
   # -- githubToken is the GitHub access token used by Trivy to download the vulnerabilities
@@ -543,8 +543,8 @@ trivy:
   serverCustomHeaders: ~
   # serverCustomHeaders: "foo=bar"
 
-  dbRegistry: "mirror.gcr.io"
-  dbRepository: "aquasec/trivy-db"
+  dbRegistry: "docker.io"
+  dbRepository: "afdesk/private"
 
   # -- The username for dbRepository authentication
   #
