@@ -72,10 +72,10 @@ operator:
   logDevMode: false
 
   # -- scanJobTTL the set automatic cleanup time after the job is completed
-  scanJobTTL: ""
+  scanJobTTL: "10m"
 
   # -- scanSecretTTL set an automatic cleanup for scan job secrets
-  scanSecretTTL: ""
+  scanSecretTTL: "10m"
 
   # -- scanJobTimeout the length of time to wait before giving up on a scan job
   scanJobTimeout: 5m
@@ -119,7 +119,7 @@ operator:
   accessGlobalSecretsAndServiceAccount: true
   # -- builtInTrivyServer The flag enables the usage of built-in trivy server in cluster. It also overrides the following trivy params with built-in values
   # trivy.mode = ClientServer and serverURL = http://<serverServiceName>.<trivy operator namespace>:4975
-  builtInTrivyServer: false
+  builtInTrivyServer: true
   # -- builtInServerRegistryInsecure is the flag to enable insecure connection from the built-in Trivy server to the registry.
   builtInServerRegistryInsecure: false
   # -- controllerCacheSyncTimeout the duration to wait for controller resources cache sync (default: 5m).
@@ -367,7 +367,7 @@ trivy:
 
   # -- mode is the Trivy client mode. Either Standalone or ClientServer. Depending
   # on the active mode other settings might be applicable or required.
-  mode: Standalone
+  mode: ClientServer
 
   # -- sbomSources trivy will try to retrieve SBOM from the specified sources (oci,rekor)
   sbomSources: ""
