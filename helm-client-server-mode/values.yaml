@@ -69,7 +69,7 @@ operator:
   leaderElectionId: "trivyoperator-lock"
 
   # -- logDevMode the flag to enable development mode (more human-readable output, extra stack traces and logging information, etc)
-  logDevMode: false
+  logDevMode: true
 
   # -- scanJobTTL the set automatic cleanup time after the job is completed
   scanJobTTL: "10m"
